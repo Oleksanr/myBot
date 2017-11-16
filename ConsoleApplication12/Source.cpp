@@ -10,6 +10,7 @@ int main()
 	cout << a << endl;
 	cout << ((float)a / CLOCKS_PER_SEC) << endl;
 	system("pause");
+	system("pause");
 
 	return  0;
 }
