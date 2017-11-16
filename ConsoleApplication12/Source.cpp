@@ -11,6 +11,7 @@ int main()
 	cout << ((float)a / CLOCKS_PER_SEC) << endl;
 	system("pause");
 	system("pause");
+	system("pause");
 
 	return  0;
 }
