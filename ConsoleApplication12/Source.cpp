@@ -212,9 +212,9 @@ int main(int argc, char* argv[])
 	cout << neurons_line_print_descriptor(line, width, height) << endl;
 	cout << "---------------------------" << endl;
 
-#if defined(_WINDOWS)
+if defined(_WINDOWS)
 	system("pause");
-#endif
+endif
 
 	return 0;
 }
