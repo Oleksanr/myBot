@@ -40,7 +40,7 @@ LRESULT MainDlg::RealDlgProc(HWND   hwnd, UINT   uMsg, WPARAM wParam, LPARAM lPa
 			STARTUPINFO si;
 			PROCESS_INFORMATION pi;
 			ZeroMemory(&si, sizeof(STARTUPINFO));
-			CreateProcess(NULL, "bbb 10 10 src.txt v.txt", NULL, NULL, FALSE, 0, NULL, NULL, &si, &pi);
+			CreateProcess(NULL, "bbb 10 10 src.txt v.txt k.txt ", NULL, NULL, FALSE, 0, NULL, NULL, &si, &pi);
 			Sleep(1500);
 			
 		}
