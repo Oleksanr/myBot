@@ -1,8 +1,17 @@
 #include "MainDlg.h"
 
 #include <Windows.h>
+#include <Commctrl.h>
+
+#pragma comment(linker,"\"/manifestdependency:type='win32' \
+name='Microsoft.Windows.Common-Controls' version='6.0.0.0' \
+processorArchitecture='*' publicKeyToken='6595b64144ccf1df' language='*'\"")
+#pragma comment(lib, "Comctl32.lib")
 int CALLBACK WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR     lpCmdLine, int nCmdShow)
 {
+	INITCOMMONCONTROLSEX init = { sizeof(INITCOMMONCONTROLSEX), ICC_WIN95_CLASSES };
+	if (!InitCommonControlsEx(&init))
+		MessageBox(NULL, "Initialization of controls has been failed!", "FATAL ERROR!", MB_OK | MB_ICONERROR);
 	MSG msg;
 
 	MainDlg* Main = new MainDlg(hInstance, MAKEINTRESOURCE(IDD_DIALOG1), NULL);
@@ -14,3 +23,4 @@ int CALLBACK WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR     lpC
 		DispatchMessage(&msg);
 	}
 }
+

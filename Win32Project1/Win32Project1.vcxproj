@@ -146,14 +146,18 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Control.cpp" />
     <ClCompile Include="DlgBox.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="MainDlg.cpp" />
+    <ClCompile Include="TextBox.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Control.h" />
     <ClInclude Include="DlgBox.h" />
     <ClInclude Include="MainDlg.h" />
     <ClInclude Include="resource.h" />
+    <ClInclude Include="TextBox.h" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="Resource.rc" />

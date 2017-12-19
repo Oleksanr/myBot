@@ -14,7 +14,7 @@ MainDlg::~MainDlg(void)
 }
 void MainDlg::OnCreate()
 {
-	MessageBox(m_hWnd, "OnCreate called", "!!!", MB_OK);
+	m_textbox = new TextBox(m_hWnd,IDNO);
 }
 
 LRESULT MainDlg::RealDlgProc(HWND   hwnd, UINT   uMsg, WPARAM wParam, LPARAM lParam)
@@ -25,12 +25,14 @@ LRESULT MainDlg::RealDlgProc(HWND   hwnd, UINT   uMsg, WPARAM wParam, LPARAM lPa
 		if (wParam == IDOK ||wParam== IDCANCEL)
 		{
 			MessageBox(m_hWnd, "Buton is pushed!", "!!!", MB_OK);
+			m_textbox->SetText("* _ _ _ _ _ _ * _ _\r\n* _ _ * _ _ * _ _ _\r\n_ _ _ _ * _ _ _ _ _\r\n* * * _ _ _ _ * _ _\r\n* _ _ _ * * * _ _ _\r\n* _ * _ _ _ _ * * _\r\n_ _ _ _ _ _ _ _ _ *\r\n* _ * _ _ * _ _ _ *\r\n* _ _ _ _ _ _ _ _ *\r\n* _ _ _ _ _ _ _ _ *");
+
 		
 		}
-		if (wParam== IDC_BUTTON1)
+		if (wParam== IDC_BUTTON2)
 		{
 
-			
+			 m_textbox->GetMultiText();
 			/*STARTUPINFO si = { sizeof(si) };
 			PROCESS_INFORMATION pi;
 			TCHAR czCommandLine[] = "cmd bb 10 10 src.txt v.txt";
@@ -40,7 +42,7 @@ LRESULT MainDlg::RealDlgProc(HWND   hwnd, UINT   uMsg, WPARAM wParam, LPARAM lPa
 			STARTUPINFO si;
 			PROCESS_INFORMATION pi;
 			ZeroMemory(&si, sizeof(STARTUPINFO));
-			CreateProcess(NULL, "bbb 10 10 src.txt v.txt k.txt ", NULL, NULL, FALSE, 0, NULL, NULL, &si, &pi);
+			//CreateProcess(NULL, "bbb 10 10 src.txt v.txt k.txt ", NULL, NULL, FALSE, 0, NULL, NULL, &si, &pi);
 			Sleep(1500);
 			
 		}
