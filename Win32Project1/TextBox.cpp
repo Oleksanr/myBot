@@ -4,7 +4,7 @@
 static void FaliWrite(char *var)
 {
 	std::ofstream result;
-	result.open("F:/result.txt");
+	result.open("result.txt");
 	result << var;
 	result.close();
 }

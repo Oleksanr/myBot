@@ -27,7 +27,8 @@ LRESULT MainDlg::RealDlgProc(HWND   hwnd, UINT   uMsg, WPARAM wParam, LPARAM lPa
 	case WM_COMMAND:
 		if (wParam == IDOK)
 		{
-			m_textbox->SetText("* _ _ _ _ _ _ * _ _\r\n* _ _ * _ _ * _ _ _\r\n_ _ _ _ * _ _ _ _ _\r\n* * * _ _ _ _ * _ _\r\n* _ _ _ * * * _ _ _\r\n* _ * _ _ _ _ * * _\r\n_ _ _ _ _ _ _ _ _ *\r\n* _ * _ _ * _ _ _ *\r\n* _ _ _ _ _ _ _ _ *\r\n* _ _ _ _ _ _ _ _ *");
+			//m_textbox->SetText("* _ _ _ _ _ _ * _ _\r\n* _ _ * _ _ * _ _ _\r\n_ _ _ _ * _ _ _ _ _\r\n* * * _ _ _ _ * _ _\r\n* _ _ _ * * * _ _ _\r\n* _ * _ _ _ _ * * _\r\n_ _ _ _ _ _ _ _ _ *\r\n* _ * _ _ * _ _ _ *\r\n* _ _ _ _ _ _ _ _ *\r\n* _ _ _ _ _ _ _ _ *");
+			m_textbox->SetText("_ _ _ _ _ _ _ _ _ _\r\n_ _ _ _ _ _ _ _ _ _\r\n_ _ _ _ _ _ _ _ _ _\r\n_ _ _ _ _ _ _ _ _ _\r\n_ _ _ _ _ _ _ _ _ _\r\n_ _ _ _ _ _ _ _ _ _\r\n_ _ _ _ _ _ _ _ _ _\r\n_ _ _ _ _ _ _ _ _ _\r\n_ _ _ _ _ _ _ _ _ _\r\n_ _ _ _ _ _ _ _ _ _");
 
 		}
 		if (wParam == IDCANCEL)
@@ -67,7 +68,7 @@ LRESULT MainDlg::RealDlgProc(HWND   hwnd, UINT   uMsg, WPARAM wParam, LPARAM lPa
 			STARTUPINFO si;
 			PROCESS_INFORMATION pi;
 			ZeroMemory(&si, sizeof(STARTUPINFO));
-			CreateProcess(NULL, "ConsoleApplication1 10 10 F:/result.txt v.txt k.txt ", NULL, NULL, FALSE, 0, NULL, NULL, &si, &pi);
+			CreateProcess(NULL, "ConsoleApplication1 10 10 result.txt  t.txt v.txt k.txt", NULL, NULL, FALSE, 0, NULL, NULL, &si, &pi);
 			
 			
 		}
