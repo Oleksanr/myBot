@@ -11,5 +11,7 @@ public:
 	void OnCreate();
 	LRESULT RealDlgProc(HWND   hwnd, UINT   uMsg, WPARAM wParam, LPARAM lParam);
 	TextBox* m_textbox;
+	TextBox* m_textbox1;
+
 };
 
