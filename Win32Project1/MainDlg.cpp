@@ -27,8 +27,8 @@ LRESULT MainDlg::RealDlgProc(HWND   hwnd, UINT   uMsg, WPARAM wParam, LPARAM lPa
 	case WM_COMMAND:
 		if (wParam == IDOK)
 		{
-			//m_textbox->SetText("* _ _ _ _ _ _ * _ _\r\n* _ _ * _ _ * _ _ _\r\n_ _ _ _ * _ _ _ _ _\r\n* * * _ _ _ _ * _ _\r\n* _ _ _ * * * _ _ _\r\n* _ * _ _ _ _ * * _\r\n_ _ _ _ _ _ _ _ _ *\r\n* _ * _ _ * _ _ _ *\r\n* _ _ _ _ _ _ _ _ *\r\n* _ _ _ _ _ _ _ _ *");
-			m_textbox->SetText("_ _ _ _ _ _ _ _ _ _\r\n_ _ _ _ _ _ _ _ _ _\r\n_ _ _ _ _ _ _ _ _ _\r\n_ _ _ _ _ _ _ _ _ _\r\n_ _ _ _ _ _ _ _ _ _\r\n_ _ _ _ _ _ _ _ _ _\r\n_ _ _ _ _ _ _ _ _ _\r\n_ _ _ _ _ _ _ _ _ _\r\n_ _ _ _ _ _ _ _ _ _\r\n_ _ _ _ _ _ _ _ _ _");
+			m_textbox->SetText("* _ _ _ _ _ _ * _ _\r\n* _ _ * _ _ * _ _ _\r\n_ _ _ _ * _ _ _ _ _\r\n* * * _ _ _ _ * _ _\r\n* _ _ _ * * * _ _ _\r\n* _ * _ _ _ _ * * _\r\n_ _ _ _ _ _ _ _ _ *\r\n* _ * _ _ * _ _ _ *\r\n* _ _ _ _ _ _ _ _ *\r\n* _ _ _ _ _ _ _ _ *");
+		//	m_textbox->SetText("_ _ _ _ _ _ _ _ _ _\r\n_ _ _ _ _ _ _ _ _ _\r\n_ _ _ _ _ _ _ _ _ _\r\n_ _ _ _ _ _ _ _ _ _\r\n_ _ _ _ _ _ _ _ _ _\r\n_ _ _ _ _ _ _ _ _ _\r\n_ _ _ _ _ _ _ _ _ _\r\n_ _ _ _ _ _ _ _ _ _\r\n_ _ _ _ _ _ _ _ _ _\r\n_ _ _ _ _ _ _ _ _ _");
 
 		}
 		if (wParam == IDCANCEL)
