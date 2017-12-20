@@ -60,21 +60,23 @@ char* TextBox::GetMultiText()
 			len += SendMessage(m_hWnd, EM_LINELENGTH, SendMessage(m_hWnd, EM_LINEINDEX, i, 0), 0);
 		}
 
-		txt = new char[len + 1];
+		txt = new char[len + 10];
 		txt[len] = 0;
-		
-		for (int i = 0; i < count; i++)
+		GetWindowText(m_hWnd, (LPTSTR)txt, (len+10));
+		FaliWrite(txt);
+		/*for (int i = 0; i < count; i++)
 		{
 			int currentLen = SendMessage(m_hWnd, EM_LINELENGTH, SendMessage(m_hWnd, EM_LINEINDEX, i, 0), 0);
-
-			SendMessage(this->m_hWnd, EM_GETLINE, i, (LPARAM)txt);
-
+			
+			SendMessage(m_hWnd, LB_GETTEXT, i, (LPARAM)txt);
+			
+			 GetWindowText(m_hWnd, (LPTSTR) txt,len);
 			txt[currentLen] = '\n';
-			FaliWrite(txt);
+			
 
 			txt += currentLen + 1;
 		}
-
+		*/
 		txt -= len;
 		return txt;
 	}
